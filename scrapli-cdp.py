@@ -3,6 +3,7 @@ from scrapli.driver.core import IOSXEDriver
 from devicelist import devices
 from rich import print as rp
 
+
 for device in devices:
     with IOSXEDriver(**device) as conn:
         response = conn.send_command("show cdp neighbor detail")
